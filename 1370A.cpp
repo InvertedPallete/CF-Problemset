@@ -11,9 +11,10 @@ int main()
     cin>>t;
     while(t--)
     {
-        int n
+        int n;
         cin>>n;
-        
+
+        cout<<n/2<<endl;
     }
     return 0;
 }
