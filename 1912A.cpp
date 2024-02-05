@@ -7,11 +7,14 @@
 using namespace std;
 int main()
 {
-    int t;
-    cin>>t;
-    while(t--)
-    {
-        
-    }
+    int n;
+    cin >> n;
+    string s;
+    cin>> s;
+    int n = s.length();
+    
+   
+
+   
     return 0;
 }
