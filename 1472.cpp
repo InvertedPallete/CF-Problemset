@@ -9,51 +9,65 @@ int main()
 {
     int t;
     cin>>t;
+   
     while(t--)
     {
         int n;
-        cin >> n;   
+        cin >> n;
         int sum = 0;
-        int check = 0;
-        int a[n];
-        for( int i = 0; i<n ; i++)
+        vector<int> v;
+        for(int i = 0; i < n; i++)
         {
-            cin >> a[i];
-            sum += a[i];
+            int a;
+            cin >> a;
+            v.push_back(a);
+            // cin>> v[i];
+            sum += v[i];
         }
 
-         if(sum % 2 != 0)
+        int temp = 0;
+        int count = 0;
+        if(sum%2 == 0)
         {
-            cout << "NO" << endl;
-            break;
-        }
 
-        int flag = sum/2;
-
-        for(int i = 0; i < n; i++ )
-        {
-            if(check == flag)
+        
+            for (int i = 0; i < n; i++)
             {
-                break;
+                temp += v[i];
+                if(temp == sum/2)
+                {
+                    cout<< "YES" << endl;
+                    break;
+                }
+                count++;
             }
 
-            if(a[i] <= flag)
+            if(count == n)
             {
-                check += a[i];
+                cout << "NO" << endl;
             }
-            
         }
-        cout << check << endl;
-        if(check == flag)
-        {
-            cout<< "YES" <<endl;
-        }
-
-    
-        else 
-        {
+        else{
             cout << "NO" << endl;
         }
+
+        /*if(sum%2 == 0 )
+        {
+            if(n%2 == 0)
+            {
+                cout << "YES"<< endl;
+            }
+
+            else
+            {
+                 cout << "NO" << endl;
+            }
+        }
+        else
+        {
+            cout << "NO" << endl;
+        }*/
+
     }
     return 0;
 }
