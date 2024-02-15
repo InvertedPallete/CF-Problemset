@@ -12,7 +12,11 @@ int main()
     cin>>t;
     while(t--)
     {
-        
+        int a,b;
+        char c;
+        cin >> a>> c >> b;
+
+        cout << a+b <<endl;
 
     }
     return 0;
