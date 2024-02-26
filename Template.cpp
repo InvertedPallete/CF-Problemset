@@ -2,7 +2,7 @@
 //
 //  26/02/2024
 //  
-//  code by @itachi52730
+//  code by Gunjit Dhakar
 //
 #include<bits/stdc++.h>
 using namespace std;
