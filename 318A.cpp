@@ -1,38 +1,24 @@
+//  EvenOdd
 //
-//  26/02/2024
+//  28/02/2024
 //  
-//  @itachi52730
+//  code by Gunjit Dhakar
 //
-#include<bits/stdc++.h>
-using namespace std;
+#include <iostream>
 
-#define ll long long
+using namespace std;
 
 int main()
 {
-   ll int n,k;
-   cin >> n >> k;
-
-   int m;
-   if(n%2 == 0)
-   {
-     m = n/2;
-   }
-   else
-   {
-    m = (n+1)/2;
-   }
-
-    if(k<=m)
+    long long n, k;
+    cin >> n >> k;
+    if (k <= (n + 1) / 2)
     {
-        cout << 2*k - 1 << endl;
+        cout << k * 2 - 1 << endl;
     }
-
     else
     {
-        cout << 2*(k-m) << endl;
+        cout << (k - (n + 1) / 2) * 2 << endl;
     }
-
     return 0;
-
 }
