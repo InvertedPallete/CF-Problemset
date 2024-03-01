@@ -1,4 +1,4 @@
-//
+//  Shuffle Party
 //
 //  01/03/2024
 //  
@@ -15,8 +15,12 @@ int main()
     cin>>t;
     while(t--)
     {
-        
+        long long n;
+        cin>> n;
 
+        long long ans = log2(n);
+        long long g = pow(2,ans);
+        cout << g << endl;
     }
     return 0;
 }
