@@ -11,12 +11,18 @@ using namespace std;
 
 int main()
 {
-    int t;
-    cin >>t;
-    while(t--)
+    string s,t;
+    cin >> s >> t;
+    int n = t.size();
+    int i = 0, j = 0;
+    while(n--)
     {
-        
+        if(t[j] == s[i])
+            i++;
+        j++;
     }
+
+    cout << i+1 << endl;
     
     return 0;
 }

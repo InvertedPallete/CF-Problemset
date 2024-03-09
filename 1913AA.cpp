@@ -1,6 +1,6 @@
+//  Rating Increase
 //
-//
-//  09/03/2024
+//  07/03/2024
 //  
 //  code by Gunjit Dhakar
 //
@@ -12,11 +12,21 @@ using namespace std;
 int main()
 {
     int t;
-    cin >>t;
-    while(t--)
+    cin >> t;
+    while (t--)
     {
+        string a;
+        cin >> a;
+
+        int mid = a.size()/2;
+
         
+
+
+
     }
+    
+
     
     return 0;
 }
