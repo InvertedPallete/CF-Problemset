@@ -1,4 +1,4 @@
-//
+//  Jai Shree Ram
 //
 //  02/06/2024
 //  
@@ -15,7 +15,16 @@ int main()
     cin >>t;
     while(t--)
     {
-        
+        int l,r;
+        cin >> l >> r;
+        for(int i = 1; i < r; i++)
+        {
+            if(pow(2,i) > r)
+            {
+                cout << i-1 << endl;
+                break;
+            }
+        }
     }
     
     return 0;
