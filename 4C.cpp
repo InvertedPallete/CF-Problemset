@@ -1,6 +1,5 @@
-//  
 // 
-//  
+//  Registration system 
 //      
 //  08/06/2024
 //
@@ -14,19 +13,41 @@ using namespace std;
 
 void solve()
 {  
-   
+    int n;
+    cin >> n;
+    unordered_map<string , int> m;
+
+    for(int i = 0 ; i < n; i++)
+    {
+        string s;
+        cin >> s;
+        m[s]++;
+        if(m[s] > 1)
+        {
+            string temp;
+            string temp2 = to_string(m[s]-1);
+            temp = s + temp2;
+            cout << temp << endl;
+            m[temp]++;
+        }
+        else
+        {
+            cout << "OK" << endl;
+        }
+    }
 }
 
 int main()
 {
     ios_base::sync_with_stdio(false); cin.tie(NULL);
-    int t;
-    cin >> t;
+    // int t;
+    // cin >> t;
 
-    while(t--)
-    {
-       solve();
-    }
+    // while(t--)
+    // {
+    //    solve();
+    // }
+    solve();
 }
     
 
