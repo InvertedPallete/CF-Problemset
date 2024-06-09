@@ -1,7 +1,6 @@
 //  
-// 
+//  Vitaliy and Pie
 //  
-//      
 //  08/06/2024
 //
 //  Code By Gunjit
@@ -14,19 +13,35 @@ using namespace std;
 
 void solve()
 {  
-   
+    int n;
+    cin >> n;
+    string s;
+    cin >> s;
+    unordered_map<char,int> keys;
+    int cnt = 0;
+    for(int i = 0; i < s.size(); i += 2)
+    {
+        keys[s[i]]++;
+
+        if(keys[(s[i+1]+32)] == 0)
+            cnt++;
+        else
+            keys[(s[i+1]+32)]--;
+    }
+    cout << cnt << endl;
 }
 
 int main()
 {
     ios_base::sync_with_stdio(false); cin.tie(NULL);
-    int t;
-    cin >> t;
+    // int t;
+    // cin >> t;
 
-    while(t--)
-    {
-       solve();
-    }
+    // while(t--)
+    // {
+    //    solve();
+    // }
+    solve();
 
     return 0;
 }

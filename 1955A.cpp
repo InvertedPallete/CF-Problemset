@@ -1,5 +1,5 @@
 //  
-// 
+//  Yogurt Scale
 //  
 //      
 //  08/06/2024
@@ -14,7 +14,17 @@ using namespace std;
 
 void solve()
 {  
-   
+   int n,a,b;
+    cin>>n>>a>>b;
+    if(2*a<=b)
+        cout<<n*a<<endl;
+    else
+    {
+        if(n&1)
+            cout<<n/2*b+a<<endl;
+        else
+            cout<<n/2*b<<endl;
+    }
 }
 
 int main()
