@@ -1,5 +1,5 @@
 //  
-// 
+//  sale
 //  
 //      
 //  12/06/2024
@@ -14,19 +14,37 @@ using namespace std;
 
 void solve()
 {  
-   
+    int n,m;
+    cin >> n >> m;
+    int ans = 0;
+    vector<int> v(n);
+    for(int i = 0; i < n;i++)
+    {
+        cin >> v[i];
+    }
+    sort(v.begin(), v.end());
+    for(int i = 0; i < n; i++)
+    {
+        if(m == 0 || v[i] >=0)
+            break;
+        ans+= v[i];
+        m--;
+    }
+    cout << abs(ans) <<endl;
+    
 }
 
 int main()
 {
     ios_base::sync_with_stdio(false); cin.tie(NULL);
-    int t;
-    cin >> t;
+    // int t;
+    // cin >> t;
 
-    while(t--)
-    {
-       solve();
-    }
+    // while(t--)
+    // {
+    //    solve();
+    // }
+    solve();
 
     return 0;
 }

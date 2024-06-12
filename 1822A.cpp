@@ -1,38 +1,26 @@
 //  
 // 
-//  
+//  buns
 //      
-//  12/06/2024
+//  11/06/2024
 //
 //  Code By Gunjit
 //
-#include<bits/stdc++.h>
-using namespace std;
 
-#define ll long long
-#define f(i,n) for(int i=0; i<n; i++)
 
-void solve()
-{  
-   
-}
+#include <cstdio>
+typedef long long ll;
 
-int main()
-{
-    ios_base::sync_with_stdio(false); cin.tie(NULL);
-    int t;
-    cin >> t;
+int main(){
 
-    while(t--)
-    {
-       solve();
+    long t; scanf("%ld", &t);
+    while(t--){
+        ll n; scanf("%lld", &n);
+        ll res = 1 + (n + 1) * (n + 1);
+        printf("%lld\n", res);
     }
 
-    return 0;
 }
-    
-
-
 
 /*
     // think of greedy algorithm first, Codeforces A,B are usually some sort of greedy and simple 800 - 900 rating

@@ -1,37 +1,31 @@
 //  
-// 
-//  
+//  global round
 //      
-//  12/06/2024
+//  10/06/2024
 //
 //  Code By Gunjit
 //
-#include<bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <climits>
 using namespace std;
-
+ 
 #define ll long long
-#define f(i,n) for(int i=0; i<n; i++)
-
-void solve()
-{  
-   
+ 
+void solve() {
+  int n; cin >> n;
+  vector<int> arr(n); for (int i = 0; i < n; ++i) cin >> arr[i];
+  ll sum = 0, mn = 0;
+  for (int i = 0; i < n; ++i) sum += arr[i], mn = min(mn, sum);
+  cout << sum - 2 * mn << '\n';
 }
-
-int main()
-{
-    ios_base::sync_with_stdio(false); cin.tie(NULL);
-    int t;
-    cin >> t;
-
-    while(t--)
-    {
-       solve();
-    }
-
-    return 0;
+ 
+int main() {
+  ios_base::sync_with_stdio(false); cin.tie(NULL);
+  int t; cin >> t;
+  for (int i = 0; i < t; ++i) solve();
+  return 0;
 }
-    
-
 
 
 /*

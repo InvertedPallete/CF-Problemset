@@ -1,6 +1,5 @@
 //  
-// 
-//  
+//  new Year's Number
 //      
 //  12/06/2024
 //
@@ -14,6 +13,8 @@ using namespace std;
 
 void solve()
 {  
+   int n;
+   cin >> n;
    
 }
 
