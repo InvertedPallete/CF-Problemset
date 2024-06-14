@@ -1,6 +1,5 @@
 //  
-// 
-//  
+//  Ilya and Bank Account
 //      
 //  13/06/2024
 //
@@ -14,20 +13,33 @@ using namespace std;
 
 void solve()
 {  
-   
+  
+    int n;
+    cin >> n;
+    if (n >= 0)
+    {
+        cout << n << endl;
+    }
+    else
+    {
+        int a = n / 10;
+        int b = n / 100 * 10 + n % 10;
+        cout << max(a, b) << endl;
+    }
+ 
 }
 
 int main()
 {
     ios_base::sync_with_stdio(false); cin.tie(NULL);
-    int t;
-    cin >> t;
+    // int t;
+    // cin >> t;
 
-    while(t--)
-    {
-       solve();
-    }
-
+    // while(t--)
+    // {
+    //    solve();
+    // }
+    solve();
     return 0;
 }
     
