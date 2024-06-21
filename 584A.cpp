@@ -1,7 +1,8 @@
 //  
-//
+// 
+//  
 //      
-//  18/06/2024
+//  15/06/2024
 //
 //  Code By Gunjit
 //
@@ -13,6 +14,12 @@ using namespace std;
 
 void solve()
 {  
+    int n, t;
+    cin >> n >>t;
+    for(int i = 0 ; ; i++)
+    {
+
+    }
    
 }
 
@@ -20,12 +27,13 @@ int main()
 {
     ios_base::sync_with_stdio(false); cin.tie(NULL);
     int t;
-    cin >> t;
+    // cin >> t;
 
-    while(t--)
-    {
-       solve();
-    }
+    // while(t--)
+    // {
+    //    solve();
+    // }
+    solve();
 
     return 0;
 }

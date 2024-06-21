@@ -1,7 +1,6 @@
-//  
-//
+//  K-th Not Divisible by n 
 //      
-//  18/06/2024
+//  17/06/2024
 //
 //  Code By Gunjit
 //
@@ -13,7 +12,18 @@ using namespace std;
 
 void solve()
 {  
-   
+   ll n,k;
+		cin>>n>>k;
+		ll total=k,ex=k;
+		while(1)
+		{
+			total+=(ex/n);
+			//cout<<total<<endl;
+			ex=(ex/n)+(ex%n);
+			if(ex<n)
+				break;
+		}
+		cout<<total<<endl;
 }
 
 int main()
