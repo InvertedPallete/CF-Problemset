@@ -11,21 +11,37 @@ using namespace std;
 #define ll long long
 #define f(i,n) for(int i=0; i<n; i++)
 
+
+bool comparePairs(const pair<int, int>& a, const pair<int, int>& b) {
+    return a.first < b.first;
+}
+
 void solve()
 {  
+   int n;
+   cin >> n;
+   vector<pair<int,int>> v;
+
+   for(int i = 0; i<n ;i++)
+   {
+        int first, second;
+        cin >> first >> second;
+        v.emplace_back(first, second);
+   }
    
 }
 
 int main()
 {
     ios_base::sync_with_stdio(false); cin.tie(NULL);
-    int t;
-    cin >> t;
+    // int t;
+    // cin >> t;
 
-    while(t--)
-    {
-       solve();
-    }
+    // while(t--)
+    // {
+    //    solve();
+    // }
+    solve();
 
     return 0;
 }

@@ -1,7 +1,7 @@
 //  
-//  
+//  Two-gram
 //      
-//  22/06/2024
+//  23/06/2024
 //
 //  Code By Gunjit
 //
@@ -13,19 +13,43 @@ using namespace std;
 
 void solve()
 {  
-   
+    int n;
+    cin >> n;
+    string s;
+    cin >> s;
+    unordered_map<string,int> m;
+    for(int i = 0 ; i < n-1 ;i++)
+    {
+        string two;
+        two.push_back(s[i]);
+        two.push_back(s[i+1]);
+
+        m[two]++;
+    }
+    string ans;
+    int max = INT_MIN;
+    for(auto it: m)
+    {
+        if(it.second > max){
+            max = it.second;
+            ans = it.first;
+        }
+    }
+    cout << ans << endl;
 }
 
 int main()
 {
     ios_base::sync_with_stdio(false); cin.tie(NULL);
-    int t;
-    cin >> t;
+    // int t;
+    // cin >> t;
 
-    while(t--)
-    {
-       solve();
-    }
+    // while(t--)
+    // {
+    //    solve();
+    // }
+
+    solve();
 
     return 0;
 }
