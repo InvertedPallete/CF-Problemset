@@ -13,7 +13,15 @@ using namespace std;
 
 void solve()
 {  
-   
+   int n, k;
+   cin >> n >> k;
+   n = n-1;
+   int cnt = 1;
+   while(n--)
+   {
+    cnt += k;
+   }
+   cout << cnt << endl;
 }
 
 int main()

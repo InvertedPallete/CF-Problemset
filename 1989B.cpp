@@ -1,7 +1,6 @@
-//  
-//  
+//  Substring and Subsequences
 //      
-//  01/07/2024
+//  29/06/2024
 //
 //  Code By Gunjit
 //
@@ -13,6 +12,8 @@ using namespace std;
 
 void solve()
 {  
+   string a,b;
+   cin >> a>> b;
    
 }
 
