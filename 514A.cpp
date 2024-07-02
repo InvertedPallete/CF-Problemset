@@ -1,5 +1,5 @@
 //  
-//  Keyboard
+//  Chewbaсca and Number
 //      
 //  01/07/2024
 //
@@ -13,27 +13,14 @@ using namespace std;
 
 void solve()
 {  
-   char c;
-   string s;
-   cin >> c>> s;
-   string temp = "qwertyuiopasdfghjkl;zxcvbnm,./";
-
-   for(int i = 0; i < s.length(); i++){
-    for(int j = 0; j < temp.length() ; j++)
-    {
-        if(temp[j] == s[i]){
-            if(c == 'R'){
-                s[i] = temp[j-1];
-            }
-            else{
-                s[i] = temp [j+1];
-            }
-            break;
-        }
-    }
+   int n;
+   cin >> n;
+   int digit;
+   while(n > 9)
+   {
+        digit = n/10;
+        if(digit < 5)
    }
-   cout << s <<endl;
-
 }
 
 int main()
