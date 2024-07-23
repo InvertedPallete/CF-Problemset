@@ -1,7 +1,7 @@
 //  
-//  
+//  Laptops
 //      
-//  22/06/2024
+//  03/07/2024
 //
 //  Code By Gunjit
 //
@@ -12,11 +12,11 @@ using namespace std;
 #define f(i,n) for(int i=0; i<n; i++)
 
 
-bool comparePairs(const pair<int, int>& a, const pair<int, int>& b) {
+bool compareFirst(const std::pair<int, int>& a, const std::pair<int, int>& b) {
     return a.first < b.first;
 }
 
-void solve()
+string solve()
 {  
    int n;
    cin >> n;
@@ -28,7 +28,18 @@ void solve()
         cin >> first >> second;
         v.emplace_back(first, second);
    }
+
+   sort(v.begin(), v.end(), compareFirst);
+
+   for(int i = 0; i < n-1; ++i)
+   {
+    if(v[i].second > v[i+1].second)
+    {
+        return "Happy Alex";
+    }
+   }
    
+   return "Poor Alex";
 }
 
 int main()
@@ -41,8 +52,8 @@ int main()
     // {
     //    solve();
     // }
-    solve();
-
+    string ans = solve();
+    cout << ans <<endl;
     return 0;
 }
     

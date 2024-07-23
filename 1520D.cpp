@@ -1,7 +1,7 @@
 //  
-//  new Year's Number
+//  
 //      
-//  13/07/2024
+//  04/07/2024
 //
 //  Code By Gunjit
 //
@@ -11,19 +11,27 @@ using namespace std;
 #define ll long long
 #define f(i,n) for(int i=0; i<n; i++)
 
-int newyear(int n)
-{
-    if(n == 2020 || n ==2021) return 1;
-    
-}
 void solve()
 {  
-    int n;
-    cin >> n;
-
-    int ans = newyear(n);
-
-   
+   int n;
+   cin >> n;
+   vector<int> v(n);
+   for(int i = 0; i < n;i++)
+   {
+    cin>> v[i];
+   }
+    int cnt = 0;
+    for(int i = 0; i < n;i++)
+    {
+        for(int j = i+1; j < n; j++)
+        {
+            if( (v[j] - v[i]) == (j-i) )
+            {
+                cnt++;
+            }
+        }
+    }
+   cout << cnt <<endl;
 }
 
 int main()
@@ -31,15 +39,13 @@ int main()
     ios_base::sync_with_stdio(false); cin.tie(NULL);
     int t;
     cin >> t;
-
     while(t--)
     {
-       solve();
+        solve();
     }
-
+    
     return 0;
 }
-    
 
 
 

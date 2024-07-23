@@ -1,7 +1,7 @@
 //  
 //  Chewbaсca and Number
 //      
-//  01/07/2024
+//  02/07/2024
 //
 //  Code By Gunjit
 //
@@ -13,26 +13,41 @@ using namespace std;
 
 void solve()
 {  
-   int n;
+   ll n;
    cin >> n;
-   int digit;
+   ll digit;
+   ll ans = 0;
+   ll i = 0;
    while(n > 9)
    {
-        digit = n/10;
-        if(digit < 5)
+        digit = n%10;
+        if(digit > 4)
+        {
+            digit = 9 - digit;
+        }
+        digit *= pow(10,i);
+        ans += digit;
+        i++;
+        n /= 10;
    }
+   if(n > 4 && n !=9) {
+    digit = 9 - digit;
+   }
+   ans += digit*pow(10,i);
+   cout << ans <<endl;
 }
 
 int main()
 {
     ios_base::sync_with_stdio(false); cin.tie(NULL);
-    // int t;
+    // ll t;
     // cin >> t;
 
     // while(t--)
     // {
     //    solve();
     // }
+
     solve();
     return 0;
 }
