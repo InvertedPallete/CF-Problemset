@@ -1,55 +1,50 @@
-//  K-th Not Divisible by n 
-//      
-//  17/06/2024
-//
-//  Code By Gunjit
-//
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>  
 using namespace std;
-
-#define ll long long
-#define f(i,n) for(int i=0; i<n; i++)
-
-void solve()
-{  
-   ll n,k;
-		cin>>n>>k;
-		ll total=k,ex=k;
-		while(1)
-		{
-			total+=(ex/n);
-			//cout<<total<<endl;
-			ex=(ex/n)+(ex%n);
-			if(ex<n)
-				break;
-		}
-		cout<<total<<endl;
-}
-
-int main()
-{
-    ios_base::sync_with_stdio(false); cin.tie(NULL);
-    int t;
-    cin >> t;
-
-    while(t--)
-    {
-       solve();
+ 
+#define f(i,n) for(ll i = 0; i < n; i++)
+#define fast_cin() ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
+ 
+ int fun( int ind, int k,int sum, int m){
+    if( ind <= 0){
+        if( k == 0 ){
+        if( (sum %m) == 0)  return 1;
+        else return 0;
+    }
+    else return 0;
+    }
+    if( k == 0 ){
+        if( (sum %m) == 0)  return 1;
+        else return 0;
     }
 
+    fun(ind-1, k-1, sum+v[ind], m)//take
+    fun(ind-1, k,sum, m)// not take
+
+
+    return take + not take;
+
+
+ }
+int main()
+{
+    #ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+    #endif
+    fast_cin();
+    long long t;
+    cin >> t;
+    while(t--){
+ 
+ 
+    }
+ 
     return 0;
 }
-    
-
-
-
-/*
-    // think of greedy algorithm first, Codeforces A,B are usually some sort of greedy and simple 800 - 900 rating
-    // C on Div2 and E on Div 3/4 requirs more thinking but still not too hard
-    //for later problems think about data structures like segment tree and ordered set
-    // try query problems, not good at them
-    // try to improve yourthinking and logic building by not giving up 
-    // 
-    //
-    // Keep Grinding —————————————Jai Shree Ram —————————————
-*/
+ 
+ 
+ 
+ 
+/* Most A problems are only pattern, maths & greedy 
+Problem B is more diverse, use greedy, binary-search, prefix-sum, little bit dp and recursion 
+ how are you*/

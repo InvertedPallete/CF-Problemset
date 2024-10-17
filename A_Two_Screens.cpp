@@ -6,16 +6,24 @@ using namespace std;
  
 int main()
 {
-    #ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
-    #endif
     fast_cin();
     long long t;
     cin >> t;
     while(t--){
-        int n;
+        string s,t;
+        cin>> s>> t;
+        int cnt = 0;
+        for( int i = 0;i <min(s.size(),t.size());i++){
+            if(s[i] != t[i])    
+                break;
+            cnt++;
+        }
         
+        int ans = (cnt+1)+(s.size()-cnt)+(t.size()-cnt);
+        if(cnt == 0) cout << ans-1<<endl;
+        
+        else cout << ans <<endl;
+ 
     }
  
     return 0;
